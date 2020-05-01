@@ -1,5 +1,7 @@
 language: php
 
+dist: trusty
+
 php:
   - 7.3
 #  - hhvm
@@ -9,9 +11,15 @@ env:
 
 before_install:
   - sudo apt update
-  - composer install
-  - sudo apt install -y php7.3-mysql sqlite3 php-xdebug
-  - npm install
+#  - composer install
+#  - sudo apt install -y php7.3-mysql sqlite3 php-xdebug
+#  - npm install
+
+addons:
+  apt:
+    packages:
+    - junit4
+    - libmockito-java
 
 before_script:
   - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
