@@ -2,7 +2,7 @@ language: php
 
 php:
   - 7.3
-  - hhvm
+#  - hhvm
 
 env:
   - DB=sqlite3
@@ -10,8 +10,6 @@ env:
 before_install:
   - sudo apt update
   - composer install
-
-install:
   - sudo apt install -y php7.3-mysql sqlite3 php-xdebug
   - npm install
 
@@ -19,10 +17,3 @@ before_script:
   - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
 
 script: phpunit tests/Unit --coverage-text
-
-notifications:  
-  email:  
-    recipients:  
-    - bboy010554@icloud.com  
-    on_success: never
-    on_failure: never
