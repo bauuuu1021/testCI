@@ -9,8 +9,7 @@ php:
 env:
   - DB=sqlite3
 
-before_install:
-  - sudo apt update
+#before_install:
 #  - composer install
 #  - sudo apt install -y php7.3-mysql sqlite3 php-xdebug
 #  - npm install
