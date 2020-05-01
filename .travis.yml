@@ -4,10 +4,18 @@ php:
   - 7.3
   - hhvm
 
+addons:
+  apt:
+    packages:
+    - php7.3-mysql
+    - sqlite3
+    - php-xdebug
+
 env:
   - DB=sqlite3
 
 before_script:
+  - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
   - composer install
   - npm install
 
