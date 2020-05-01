@@ -10,4 +10,6 @@ before_script:
   - npm run development
 
 script:
-  - phpunit tests/Unit/ 
+  - phpunit tests/Unit/DBRelatedTest.php
+  - phpunit tests/Unit/RequestRelatedTest.php
+  - phpunit tests/Unit/ExampleTest.php
