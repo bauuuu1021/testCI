@@ -19,6 +19,9 @@ addons:
     packages:
     - junit4
     - libmockito-java
+    - php7.3-mysql
+    - sqlite3
+    - php-xdebug
 
 before_script:
   - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
