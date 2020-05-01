@@ -8,7 +8,7 @@ env:
   - DB=sqlite3
 
 before_install:
-  - sudo apt upgrade && sudo apt update
+  - sudo apt update
   - composer install
 
 install:
@@ -19,3 +19,10 @@ before_script:
   - curl -sSfL -o ~/.phpenv/versions/hhvm/bin/phpunit https://phar.phpunit.de/phpunit-5.7.phar
 
 script: phpunit tests/Unit --coverage-text
+
+notifications:  
+  email:  
+    recipients:  
+    - bboy010554@icloud.com  
+    on_success: never
+    on_failure: never
