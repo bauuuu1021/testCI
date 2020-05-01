@@ -5,6 +5,7 @@ php:
 
 before_script:
   - composer install
+  - cp .env.testing .env
 
 script:
-  - phpunit tests/Unit/ --coverage-text
+  - phpunit tests/Unit/ 
