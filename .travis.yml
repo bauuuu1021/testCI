@@ -1,4 +1,4 @@
-dist: bionic
+dist: precise
 
 language: php
 
@@ -11,8 +11,9 @@ services:
 
 before_script:
   - cp .env.testing .env
-  - composer install
+  - composer self-update
+  - composer install --no-interaction
   - php artisan migrate
 
 script:
-  - phpunit
+  - vendor/bin/phpunit
