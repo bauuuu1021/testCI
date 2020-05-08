@@ -4,7 +4,6 @@ language: php
 
 php:
   - 7.3
-  - 7.4
 
 services:
   - sqlite
@@ -16,4 +15,4 @@ before_script:
   - php artisan migrate
 
 script:
-  - vendor/bin/phpunit
+  - vendor/bin/phpunit --coverage-text
