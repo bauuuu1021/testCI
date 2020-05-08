@@ -1,13 +1,18 @@
+dist: bionic
+
 language: php
 
 php:
-  - 7.2
+  - 7.3
   - 7.4
-  - 8.0
+
+services:
+  - sqlite
 
 before_script:
-  - composer install
   - cp .env.testing .env
+  - composer install
+  - php artisan migrate
 
 script:
   - phpunit
