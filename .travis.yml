@@ -6,8 +6,6 @@ php:
 before_script:
   - composer install
   - cp .env.testing .env
-  - npm install
-  - npm run development
 
 script:
   - phpunit
