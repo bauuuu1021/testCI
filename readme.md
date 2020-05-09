@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/bauuuu1021/testCI.svg?branch=test%2Fbau)](https://travis-ci.org/bauuuu1021/testCI)
+[![codecov](https://codecov.io/gh/bauuuu1021/testCI/branch/test%2Fbau/graph/badge.svg)](https://codecov.io/gh/bauuuu1021/testCI)
+# TestCI
+This is a project to practice `travis CI` and `codecov`. Please find the origin repository [here](https://github.com/nctu-software-testing/db-project) 
 ## Download Dependencies
 - [Node.js 10](https://nodejs.org/en/download/) (cannot above)
 - [PHP 7.3](https://www.php.net/downloads.php) (or above)
